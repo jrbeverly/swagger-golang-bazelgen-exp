@@ -1,0 +1,9 @@
+Name=swagger
+Version=0.29.0
+
+[linux_amd64]
+OS=linux
+CPU=x86_64
+IsArchive=false
+URL=https://github.com/go-swagger/go-swagger/releases/download/v0.29.0/swagger_linux_amd64
+Sha256Sum=0666361b45e11862e3d6487693da9f498710e395660ed0fcbea835a9e8c7272d

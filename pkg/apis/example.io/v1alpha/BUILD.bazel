@@ -1,0 +1,17 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "v1alpha",
+    srcs = [
+        "extensions.go",
+        "toolchain.go",
+        "toolchain_platform_info.go",
+    ],
+    importpath = "github.com/jrbeverly/golang-jsonschema/pkg/apis/example.io/v1alpha",
+    visibility = ["//visibility:public"],
+    deps = [
+        "@com_github_go_openapi_strfmt//:strfmt",
+        "@com_github_go_openapi_swag//:swag",
+        "@in_gopkg_yaml_v2//:yaml_v2",
+    ],
+)

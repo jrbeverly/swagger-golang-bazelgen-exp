@@ -1,0 +1,29 @@
+paths: {}
+swagger: "2.0"
+info:
+  version: v2alpha
+  title: ToolchainSpec
+definitions:
+  Toolchain:
+    properties:
+      name:
+        type: string
+      version:
+        type: string
+  ToolchainPlatformInfo:
+    properties:
+      os:
+        type: string
+      platform:
+        type: string
+      executable:
+        type: string
+      prefix:
+        type: string
+      url:
+        type: string
+      sha256sum:
+        type: string
+
+
+

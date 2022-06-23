@@ -1,0 +1,15 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
+
+go_library(
+    name = "golang-jsonschema_lib",
+    srcs = ["main.go"],
+    importpath = "github.com/jrbeverly/golang-jsonschema/cmd/golang-jsonschema",
+    visibility = ["//visibility:private"],
+    deps = ["//pkg/apis/example.io/v1alpha"],
+)
+
+go_binary(
+    name = "golang-jsonschema",
+    embed = [":golang-jsonschema_lib"],
+    visibility = ["//visibility:public"],
+)

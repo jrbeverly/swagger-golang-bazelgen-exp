@@ -1,0 +1,23 @@
+load("@rules_swagger//:defs.bzl", "swagger_gen")
+
+swagger_gen(
+    name = "v1alpha",
+    output = "pkg/apis/example.io",
+    parameters = [
+        "--struct-tags json",
+        "--struct-tags yaml",
+        "-m v1alpha",
+    ],
+    spec = ":v1alpha/swagger.yml",
+)
+
+swagger_gen(
+    name = "v2alpha",
+    output = "pkg/apis/example.io",
+    parameters = [
+        "--struct-tags json",
+        "--struct-tags yaml",
+        "-m v2alpha",
+    ],
+    spec = ":v2alpha/swagger.yml",
+)
